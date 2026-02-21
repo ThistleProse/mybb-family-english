@@ -1,57 +1,59 @@
+A Google-Translate version of this brilliant MyBB plugin.
+
 # Family Control Panel
-Vorab: das Plugin wurde vor einiger Zeit im Auftrag und in Zusammenarbeit mit @berrie entwickelt - sie hat damals die detailreichen Vorgaben / Ideen / Funktionen bestimmt und das Plugin seit Jahren in ihren Foren im Einsatz. <b>Danke</b>, dass ich das Plugin veröffentlichen darf. ♥
+First off: this plugin was developed some time ago on behalf of and in collaboration with @berrie – she defined the detailed specifications, ideas, and functions, and has been using the plugin in her forums for years. <b>Thank you</b> for allowing me to publish the plugin. ♥
 
 <hr />
 
-Dieses Plugin erweitert euer MyBB-RPG-Forum um die Möglichkeit, auf einer Extraseite die User die Familien ihrer Charaktere erstellen zu lassen und nach Generationen aufgeteilt in ihrem Profil anzeigen zu lassen. 
+This plugin extends your MyBB-RPG forum by allowing users to create their characters' families on a separate page and display them in their profile, divided by generations.
 
-Die neue Seite wird über euerforum.de/family.php erreicht. 
+The new page can be accessed via yourforum.com/family.php 
 
 <ul>
-<li> Anlage von Familien mit allgemeinem Infos 
-<li> Anlage einzelner Familienmitglieder, aufgeteilt nach Generationen
-<li> Darstellung der Familie mit allen Infos im Profil des Charakters
-<li> Automatische Erstellung eines Gesuchsthreads zur Familie im Gesuchsunterforum
-<li> Filterung der Familien nach Informationen wie z.B. Gesellschaftsschicht
-<li> Filterung von bespielbaren Familienmitgliedern nach Alter & Geschlecht
-<li> Anzeige von bespielbaren oder nicht bespielbaren Mitgliedern
-<li> Vorhandene Familienmitglieder können sich per Klick in die Familie eintragen
-<li> Familienmitglieder können per Klick reserviert werden
-<li> MyAlerts-Benachrichtigung bei Reservierung eines Familienmitglieds
-<li> Darstellung von vorhandenen Familienmitgliedern mit Avatar & Profillink
-<li> Sollte zu einem Mitglied ein Einzelgesuch vorhanden sein, kann dieses verlinkt werden
-<li> Familien-"Besitzer" können Reservierungen wieder freigeben
-<li> Eigene Reservierungen werden auf dem Index angezeigt
-<li> Angabe eines Default-Bilds für Familienmitglieder im Admin CP
-<li> Angabe eines Bilds für Familienmitglieder durch Ersteller
+<li> Setting up a family account with general information
+<li> Investment of individual family members, divided by generations
+<li> Presentation of the family with all information in the character's profile.
+<li> Automatic creation of a request thread for the family in the request subforum
+<li> Filtering families based on information such as social class
+<li> Filtering playable family members by age & gender
+<li> Display of playable or unplayable members
+<li> Existing family members can add themselves to the family with a single click.
+<li> Family members can be reserved with one click.
+<li> MyAlerts notification when a family member makes a reservation
+<li> Display of existing family members with avatar & profile link
+<li> If an individual request exists for a member, it can be linked.
+<li> Family "owners" can release reservations again.
+<li> Your own reservations will be displayed on the index.
+<li> Specifying a default image for family members in the Admin CP
+<li> Creator provides a picture for family members
 
 </ul>
 
-<h1>Voraussetzungen</h1>
-Jeder Spielername darf nur <b>einmal</b> vergeben sein, da das Reservierungssystem damit verbunden ist.
+<h1>Requirements</h1>
+Each player name may only be assigned <b>once</b>, as this is linked to the reservation system.
 
-<h1>Plugin funktionsfähig machen</h1>
+<h1>Make the plugin functional</h1>
 <ul>
-<li>Die Plugin-Datei ladet ihr in den angegebenen Ordner <b>inc/plugins</b> hoch.
-<li>Die Language-Dateien ladet ihr in den entsprechenden Sprachordner.
-<li>Das Plugin muss nun im Admin CP unter <b>Konfiguration - Plugins</b> installiert und aktiviert werden
-<li>In den Foreneinstellungen findet ihr nun - ganz unten - Einstellungen zu "Familien Control Panel". Macht dort eure gewünschten Einstellungen.
+<li>Upload the plugin file to the specified folder <b>inc/plugins</b>.
+<li>You upload the language files to the corresponding language folder.
+<li>The plugin must now be installed and activated in the Admin CP under <b>Configuration - Plugins</b>.
+<li>In the forum settings, you will now find – at the very bottom – settings for "Family Control Panel". Make your desired settings there.
 </ul><br />
 
-Das Plugin ist nun einsatzbereit. Solltet ihr schon einiges an eurem Forum gemacht haben, und nicht wie ich im Testdurchlauf ein Default-Theme verwenden, kann es sein, dass nicht alle Variablen eingefügt werden. Sollte euch eine Anzeige fehlen, könnt ihr auf folgende Variablen zurückgreifen:
+The plugin is now ready to use. If you've already made some changes to your forum, and aren't using a default theme like I did during testing, it's possible that not all variables will be inserted. If you're missing a display, you can use the following variables:
 
-<blockquote>{$index_family}  // Link zur Reservierungsübersicht (index)<br />
-ruft index_family auf<br /><br />
+<blockquote>{$index_family} // Link to the reservation overview (index)<br />
+calls index_family<br /><br />
 
-{$member_profile_family} // Familie im Profil (member_profile)<br />
-ruft member_profile_family auf<br />
+{$member_profile_family} // Family in profile (member_profile)<br />
+calls member_profile_family<br />
 
-{$showthread_family} // Familie überm Post im Gesuchsbereich (showthread)<br />
-ruft showthread_family auf
+{$showthread_family} // Family above post in request area (showthread)<br />
+calls showthread_family
 </blockquote>
 
-<h1>Template-Änderungen</h1>
-Folgende Templates werden durch dieses Plugin <i>neu hinzugefügt</i>:
+<h1>Template changes</h1>
+The following templates are added by this plugin <i>newly</i></i>:
 
 <ul>
 <li>family
@@ -79,17 +81,18 @@ Folgende Templates werden durch dieses Plugin <i>neu hinzugefügt</i>:
 <li>showthread_family
 </ul>
 
-Folgende Templates werden durch dieses Plugin <i>bearbeitet</i>:
+The following templates are <i>edited</i> by this plugin:
 <ul>
 <li>index
 <li>member_profile
 <li>showthread
 </ul>
 
-<h1>Empfohlene Plugins</h1>
-<a href="https://github.com/MyBBStuff/MyAlerts" target="_blank">MyAlerts</a> von euanT<br />
+<h1>Recommended plugins</h1>
+<a href="https://github.com/MyBBStuff/MyAlerts" target="_blank">MyAlerts</a> by euanT<br />
 
 <h1>Demo</h1>
+<i>English screen shots to be added</i>
 
 <center><img src="https://snipboard.io/WQ29lr.jpg" />
 
