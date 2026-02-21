@@ -17,7 +17,7 @@ function family_info()
 {
 	return array(
 		"name"			=> "Family Control Panel",
-		"description"	=> "Durch diese Erweiterung können Mitglieder umfangreiche Einstellungen im Hinblick auf die Familien ihrer Charaktere vornehmen. Familien können erstellt und individuell gestaltet werden; zudem entsteht eine Datenbank zum Durchsuchen für Mitglieder, Reservierungen durch Gäste und User + automatisches Generieren von Gesuchvorlagen.",
+		"description"	=> "This extension allows members to make extensive settings regarding their characters' families. Families can be created and customized; in addition, a database is created for members to search, guest and user reservations, and automatic generation of request templates.",
 		"website"		=> "http://github.com/user/its-sparks-fly",
 		"author"		=> "sparks fly",
 		"authorsite"	=> "http://github.com/user/its-sparks-fly",
@@ -67,7 +67,7 @@ function family_install()
 	$setting_group = array(
     	'name' => 'familycp',
     	'title' => 'Family Control Panel',
-    	'description' => 'Einstellungen für das Family Control Panel-Plugin.',
+    	'description' => 'Settings for the Family Control Panel plugin.',
     	'disporder' => -1, // The order your setting group will display
     	'isdefault' => 0
 	);
@@ -78,22 +78,22 @@ function family_install()
 	// create settings
 	$setting_array = array(
     	'familycp_username' => array(
-        	'title' => 'Spitznamen-Profilfeld',
-        	'description' => 'Hier die Field-ID des Spielernamen-Feld angeben.',
+        	'title' => 'Nickname profile field',
+        	'description' => 'Enter the Field ID of the player name field here.',
         	'optionscode' => 'text',
         	'value' => '', // Default
         	'disporder' => 1
     	),
     	'familycp_fid' => array(
-        	'title' => 'Familiengesuche-Unterforum',
-        	'description' => 'In welches Forum (Foren-ID angeben!) sollen die Familiengesuche gepostet werden?',
+        	'title' => 'Family Requests Subforum',
+        	'description' => 'In which forum (please specify forum ID!) should the family requests be posted?',
         	'optionscode' => 'text',
         	'value' => '', // Default
         	'disporder' => 2
     	),
       	'familycp_default_img' => array(
-        	'title' => 'Standardbild für Familienmitglieder',
-        	'description' => 'Volle URL zum Standardbild für freie Familienmitglieder',
+        	'title' => 'Standard image for family members',
+        	'description' => 'Full URL to the default image for free family members',
         	'optionscode' => 'text',
         	'value' => '', // Default
         	'disporder' => 3
@@ -463,7 +463,7 @@ function family_activate()
 	<form action="family.php" method="post" id="claim_guest">
 		<input type="hidden" name="action" id="action" value="claim" />
 		<input type="hidden" name="id" id="id" value="{$fammember[\'fmid\']}" />
-		<input type="text" name="guest" id="guest" style="width: 45px !important; height: 7px !important; font-size: 8px;" value="Spitzname" />
+		<input type="text" name="guest" id="guest" style="width: 45px !important; height: 7px !important; font-size: 8px;" value="Nickname" />
 		<input type="submit" id="submit" name="submit" value="{$lang->family_claim}" style="width: 60px !important; font-size: 8px;" />
 	</form>
 </div>'),
