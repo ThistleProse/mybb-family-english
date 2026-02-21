@@ -75,7 +75,7 @@ if($action == "addfamily") {
 // add family backend
 if($action == "do_addfamily") {
 
-    // STARTSCHUSS ERSTELLEN!
+    // CREATE THE STARTING SHOT!
     // Set up posthandler.
   	require_once MYBB_ROOT."inc/datahandlers/post.php";
   	$posthandler = new PostDataHandler("insert");
